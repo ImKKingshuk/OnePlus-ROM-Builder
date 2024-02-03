@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="git://codeaurora.org/" name="caf" review="codeaurora.org"/>
+<!-- Replace {devicemodel ex:oneplusX} with target device -->
+<!-- Example: {devicemodel ex:oneplusX} ->> oneplusX  -->
   <default remote="caf" revision="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="device/common" revision="59222307bea10506e1f4814bf6687fb4cdcddabe" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="device/generic/arm64" revision="39249053f37b7f9633eb406af3dbedfea7bf8b3e" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -20,19 +21,19 @@
   <project groups="device,fugu,pdk-fs" name="device/google/atv" revision="b02e693b9d4cdcd2cb49cb872e2074c14115de27" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="device,hammerhead,pdk-fs" name="device/lge/hammerhead" revision="b7ddbed1a8c86d5aa9e11911ac592f9dd20270bc" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="device,hammerhead,pdk-fs" name="device/lge/hammerhead-kernel" revision="94d6144be4d3c5a716b978d5a1079859ac52bb90" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="OnePlusOSS/android_device_qcom_common" path="device/qcom/common" remote="oneplus" revision="oneplusX/6.0.1">
+  <project name="OnePlusOSS/android_device_qcom_common" path="device/qcom/common" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1">
     <copyfile dest="build.sh" src="build.sh"/>
     <copyfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
-  <project name="OnePlusOSS/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project name="OnePlusOSS/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project groups="pdk" name="device/sample" revision="85a048d02b8cc16317581bb5c9e8fa9821057031" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="kernel/lk" path="bootable/bootloader/lk" revision="7d2adc35606c56036f32b4d1c3996183ae927be5" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="OnePlusOSS/android_kernel_oneplus_msm8974" path="kernel" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project name="OnePlusOSS/android_kernel_oneplus_msm8974" path="kernel" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project groups="pdk" name="platform/abi/cpp" path="abi/cpp" revision="36b381298a4efb7c293d394d8b1acbda68230989" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="OnePlusOSS/android_art" path="art" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project groups="pdk" name="OnePlusOSS/android_art" path="art" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project groups="pdk" name="platform/bionic" path="bionic" revision="de49950f6d6e0a8ddaf834d07539683b148ac65d" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/bootable/recovery" path="bootable/recovery" revision="8dca08d0b27e75f3fb220765433399869c0c1cd9" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="OnePlusOSS/android_build" path="build" remote="oneplus" revision="oneplusX/6.0.1">
+  <project groups="pdk" name="OnePlusOSS/android_build" path="build" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
   <project groups="cts,pdk-cw-fs" name="platform/cts" path="cts" revision="47206367488f017f1868fb6d6c312f5fa3ccbf3c" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -222,7 +223,7 @@
   <project name="platform/external/selinux" path="external/selinux" revision="c3b220252ea64bbe168307c102c4da616e4cf63d" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/sepolicy" path="external/sepolicy" revision="69dc5863e17e67555f3c59f19e86430607a655d8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk,qcom_msm8x26" name="platform/external/sfntly" path="external/sfntly" revision="a01a58c85ae6f0b1fe97e4a383bb7536285264d8" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk,qcom_msm8x26" name="OnePlusOSS/android_external_skia" path="external/skia" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project groups="pdk,qcom_msm8x26" name="OnePlusOSS/android_external_skia" path="external/skia" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project name="platform/external/slf4j" path="external/slf4j" revision="7122d7eba20aeeaf319017b655271889f825f750" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/smali" path="external/smali" revision="15284127c9ed241f1de20fdd8cdb24cb12cd2119" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/sonic" path="external/sonic" revision="10c16fc60582d7e8bcf7533793871485d339e241" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -256,7 +257,7 @@
   <project groups="pdk-cw-fs" name="platform/external/zopfli" path="external/zopfli" revision="bb96afe13a50bfc17259dcf56f44e997923c705c" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/zxing" path="external/zxing" revision="d2256df36df8778a3743e0a71eab0cc5106b98c9" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/frameworks/av" path="frameworks/av" revision="45d276dc90b4f97207520f533ee930364c8d05ff" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk-cw-fs" name="OnePlusOSS/android_frameworks_base" path="frameworks/base" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project groups="pdk-cw-fs" name="OnePlusOSS/android_frameworks_base" path="frameworks/base" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project groups="pdk" name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="b7f05114e5f408479b50647837cdf25187bfd164" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="8c10afdc806cbb9d4560e90b100f0dcefdd46a21" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="99ea89ee558c3917383468febeef186df2e6a76c" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -295,16 +296,16 @@
   <project groups="pdk" name="platform/hardware/broadcom/libbt" path="hardware/broadcom/libbt" revision="43e1463d2d550b7b2f93cdcc26050a3651fff272" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/hardware/libhardware" path="hardware/libhardware" revision="7d8ec8f20bbde9af8769ce8f9043df56845a92e1" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" revision="c91951354b9ca839060349faa20fc82c8792b233" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="oneplus" revision="oneplusX/6.0.1"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="oneplus" revision="oneplusX/6.0.1"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_camera" path="hardware/qcom/camera" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
+  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
+  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_camera" path="hardware/qcom/camera" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project groups="qcom,default" name="platform/hardware/qcom/display" path="hardware/qcom/display" revision="613b8c890106aefc211f2687a4a162a3db57c070" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="qcom,default" name="platform/hardware/qcom/gps" path="hardware/qcom/gps" revision="8c74bdeda71c337baeaa3464213792ce505edc9e" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="qcom" name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster" revision="621e017384d2225b6f7cf465995523a13574bc25" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="qcom,default" name="platform/hardware/qcom/media" path="hardware/qcom/media" revision="dbbc87bad99d6fd4f0b0c693191f4870cf7ded0b" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="qcom,default" name="platform/hardware/qcom/sensors" path="hardware/qcom/sensors" revision="b1fa2fa744d26a7eaa3ff1988dd8a32c45f0df54" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="oneplus" revision="oneplusX/6.0.1"/>
-  <project groups="pdk" name="OnePlusOSS/android_hardware_ril" path="hardware/ril" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
+  <project groups="pdk" name="OnePlusOSS/android_hardware_ril" path="hardware/ril" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project groups="pdk" name="platform/libcore" path="libcore" revision="295781a70ff1e5e404313bea17424444a0375fcb" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/libnativehelper" path="libnativehelper" revision="b7a25286026b49f0f7d95b25f2d32c4f47f498ef" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/ndk" path="ndk" revision="e6403c6a048bdec5a7fc7c6c0cc149fc5f098f80" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -438,8 +439,8 @@
   <project name="platform/vendor/qcom-opensource/testframework" path="vendor/qcom/opensource/testframework" revision="a97b3583e088f4ee85f0495a9af416426f5d5e25" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/vendor/qcom-opensource/time-services" path="vendor/qcom/opensource/time-services" revision="a2db4ea2c43284ffa6e091b5730de8be7a7c717a" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/vendor/qcom-opensource/wlan/prima" path="vendor/qcom/opensource/wlan/prima" revision="f980e017030e456a3e672cc9836e29b7b7e6bc1b" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="OnePlusOSS/android_vendor_qcom_copper" path="device/qcom/msm8974" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project name="OnePlusOSS/android_vendor_qcom_copper" path="device/qcom/msm8974" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
   <project name="platform/vendor/qcom/msm8226" path="device/qcom/msm8226" revision="508cd0b8bc5ff78719aadd4282268fc2870dc9c8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/vendor/qcom/msm8610" path="device/qcom/msm8610" revision="93aa50a326ef1d416dbf58cdc4b5a0449123ac64" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="OnePlusOSS/android_vendor_oneplus_oneplusX" path="vendor/oneplus" remote="oneplus" revision="oneplusX/6.0.1"/>
+  <project name="OnePlusOSS/android_vendor_oneplus_{devicemodel ex:oneplusX}" path="vendor/oneplus" remote="oneplus" revision="{devicemodel ex:oneplusX}/6.0.1"/>
 </manifest>
